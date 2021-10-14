@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  spark:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: spark
+    ports:
+      - "8888:8888"
+      - "8080:8080"
+      - "7077:7077"
+      - "4040:4040"
+    volumes:
+      - ./develop:/develop
